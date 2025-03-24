@@ -1,0 +1,8 @@
+tmp
+*-backups
+fp-info-cache
+*.bak
+*-bak
+*.lck
+*.cache
+kibot_venv

@@ -34,6 +34,9 @@
 
 ### Notes
 * There seems to be no cheap LED driver which supports row *and* column driving
+    * IS31FL3731 seems to be pretty capable. Costs a little more but is still
+    affordable. However, choosing the simpler part surely teach one more
+    things than just buying the solution.
 * One option may also to use just a RP2040 per tile as they are so cheap
     * More development time required for firmware
     * Seems to only run at 12MHz without external oscillator
@@ -64,6 +67,24 @@ as we need 8 of them per tile
         * There are many SOT-363 options so if this one does not work, one can
         probably find a pin compatible alterative
     * [Search on digikey](https://www.digikey.jp/en/products/filter/transistors/fets-mosfets/fet-mosfet-arrays/289?s=N4IgjCBcoEwAwHYqgMZQGYEMA2BnApgDQgD2UA2iAgMwAcCALEsWDPHHCC2xzCALrEADgBcoIAMoiATgEsAdgHMQAX2IA2OLWQg0kLHiKkKIGGFoBWauq6nrNBrZj2rThq2p9iMBvHXU3ajAATgDvBiDgm2IEdVoYC2CnCwtLMNMUy21vVNiLZODguGjTdWc4p38IkpgEGGDUpwQLLUdvWlC2JyKEUO6YeLbTYIGE7uCwFNswEIQ62wZaScSFsGavEHdm9MXl7M2WmlsWos5iCwGwEpS4d2OWxvPGanTE53TNEYgNWvrp9WawSGV1iYHSrABYGBMEh%2B1YtCY%2BW4CLm01qCCWaOCtABWPo33AQSsBLBkwYwKJDCSLBe7g2YIYiTh1g4JTBdQq3jgkyBTm5ZXS8CuL2mCHMCNFAz6LDqHTZssKouoUWBjCiJLV8xlmkx2q08o5SJA8TycIxMKNayKUxl1up4FovGYDo4nictRCGzYdUQfM0NtMxTgFmd2xoBL8jpqiHJ9vgjBWXPidD5gyGvVY5lTCSN8BGCDOpjA3LBTmLM2dZmK8TLYM5RfZhZ8c2Kbjm1CGzcYleoWi0TiC1F6tlo1CsZQHzhCk5xPYY3M7HfccfUZXUEdXA32MP8t2S9VxOXnk2STHnp8YEcdBe3cVojsqIwf3gL7kFr66L7Wve6Q58v5oXNQnWJxRwRDZe0WRViEg61bFiVdfRg25QjjKIUiGHF6GdfwrUtBl1GBXw4CKf4ZjWaZRypcFRxaQtzDHeBklXGYBGEMRIEkGQFGUNQQAAWj4aBdCgGQAFcjDISBKCNJJ%2BD4-ikmEvRxMkkwIHkvibGE2QABNxH48tbFEcRbBEABPIR8HETBcDQFQVCAA)
+
+#### Clock
+The clock will have to arrive at each TLC59283 before the output of the
+previous one had a chance to change. According to the data sheet, the delay
+until SOUT changes is normally around 11ns. As we are only concerned about
+adjacent modules in close proximity, the clock propagation delay should be well
+below 10ns.
+A possible concern mentioned [here](https://www.eevblog.com/forum/projects/shift-register-delay-tlc59283/msg5714097/#msg5714097)
+is that the clock signal integrity may be degraded due to large capacitance if
+we fan it out too far. To solve this we may employ a buffer, this however would
+mean we need either a very fast buffer to not skew the clock relative to the
+data signal too much, or also have to buffer the data signal at the same time.
+Buffering two signals should be doable.
+This is probably not an issue, but technically if the buffers are to slow, this
+could limit the rate at which we can operate the panel (i.e. clock in data).
+As, if it works, no buffers should be the easier solution, for now I'll try
+without. If required, we may try to add clock line terminations to avoid
+ringing.
 
 ## Mechanical Design
 * Board interconnects using horizontal pin headers on the back of the board (tile is on the front)
