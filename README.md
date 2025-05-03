@@ -1,3 +1,11 @@
+# *LTP-12188M-08* Based Two Color 8x8 LED Matrix Display Module
+## Motivation
+Found a place that sold their dead stock of *LTP-12188M-08* modules for
+extremely cheap and bought a whole bunch.
+To drive those I would like to have a minimal and cheap solution which is also
+modular, meaning I can build an (for any practical purposes) arbitrarily sized
+display by just assembling identical modules (and perhaps a few cables etc.).
+
 ## Parts
 * *LTP-12188M-08* (8x8 two-color (red/green) LED dot matrix)
 * *TLC59283* (16 channel constant current LED driver with pre-charge FET)
@@ -12,18 +20,18 @@
         for which a pixel can be either on or off. Thus a 69 level brightness
         adjustment may be possible.
 * *DMP31D7LDW-13* (dual p-channel enhancement mode MOSFET)
-    * Seems to be the cheapest on digikey with ~500ma sustained current
+    * Seems to be the cheapest on DigiKey with ~500ma sustained current
     * Should switch fast enough
         * NTZD3152P may be a faster alternative, but tolerates less peak
         current (sustained currents is similar though)
 * Board connectors
     * DigiKey
         * *Ph2ra-16-ua*
-            * cheapest on digikey
+            * cheapest on DigiKey
             * mating connector from same manufacturer seems to be rs2br-16-g? but
             this is not readily available and of odd shape...
         * *pptc082ljbn-rc*
-            * Cheapest mating connector on digikey
+            * Cheapest mating connector on DigiKey
         * *Consider buying those from lcsc where they should be much cheaper*
     * LCSC
         * *2541WR-2x08P*
@@ -31,23 +39,17 @@
         * *PM254-2-08-W-8.5*
             * Mating part from same manufacturer: PZ254-2-08-W-8.5
 
-
 ### Notes
 * There seems to be no cheap LED driver which supports row *and* column driving
     * IS31FL3731 seems to be pretty capable. Costs a little more but is still
-    affordable. However, choosing the simpler part surely teach one more
+    affordable. However, choosing the simpler part will surely teach one more
     things than just buying the solution.
-* One option may also to use just a RP2040 per tile as they are so cheap
-    * More development time required for firmware
-    * Seems to only run at 12MHz without external oscillator
-    * Restricts us to one microcontroller while with using the shift registers
-    the driving microcontroller can be anything that can shift in the data
 
-#### LED currents
+#### LED Currents
 * Use 5V supply
     * The TLC59283 are constant current and support up to 10V
         * The constant-current value of all 16 channels is set by a single external resistor
-    * 3.3V may also work, but may be insuficcient for some chips, so use 5V
+    * 3.3V may also work, but may be insufficient for some chips, so use 5V
 * Peak forward current is 60mA/90mA (green/red)
     * 16 columns (8 red 8 green) on one row so peak current of 1200 mA per row
 * Average current is 25mA (same for both colors)
@@ -56,6 +58,8 @@
     * In actual operation the rows are multiplexed so actually only about an
     eight of the average current is expected. So actually 400mA sustained
     current per tile if all LEDs are on.
+    * Eventually set the current limit at the TLC59283 to around 25mA
+        * 2k resistor should give 26.5mA, which is alright
 * Want row drivers separately for each tile to avoid driver current scaling
 with number of tiles
     * Make sure that connections between tiles support high enough currents
@@ -89,3 +93,37 @@ ringing.
 ## Mechanical Design
 * Board interconnects using horizontal pin headers on the back of the board (tile is on the front)
     * 8 pins seem to fit just right, so two rows with 8 pins each seems to be a good choice
+    * These also will provide mechanical support within each row
+* Consider some sort of locating feature to use to locate modules in maybe a
+3d-printed back plane or with small clips to be inserted between modules (**TODO**) 
+    * Could shave off the corners and have short square (45 deg. rotated) posts on the back plane
+    * High symmetry is probably a good thing so locating features on maybe only
+    top/bottom may not be as useful as the shaved off corners
+    * To assemble multiple rows such a locating feature would be required
+    * For a large display with many rows and columns a backplane is probably mandatory
+    
+## Heat Dissipation
+Found that when I run a fully lit frame (all 16 LEDs enabled while multiplexing
+the rows) the whole module gets quite hot. Not entirely sure what produces the
+heat. If it is the TLC59283, one could simply remove the solder mask on the
+back side of the board which is a ground plane to which the ground pad on the
+TLC59283 is connected to and place some sort of heat sink there.
+This is of course the reason why the TLC59283 is placed under the LED matrix
+module on the front and not at the back of the board and not simply attributed
+to be not checking the orientation of the modules footprint before doing the
+tedious routing which I do not want to do twice.
+Will have to further check what is the source of the heat. However, as long as
+the display is not constantly fully illuminated, it does not appear to get
+excessively hot.
+
+## Driving the Modules
+I use an Raspberry Pi Pico (2 to be exact) to the modules. The serial interface
+for the TLC59283 is implemented using a PIO state machine (with DMA) which can
+clock out serial data independent of the processor cores and thus is a very
+performant solution. Switching between the rows is done by the processor which
+also feeds data from a global frame buffer to the DMA (which feeds it to the
+PIO state machine).
+Other microcontrollers will probably also work. Not sure how one would handle
+the serial communication though. AT a slower rate one can perhaps just bit bang
+using GPIO. Didn't try.
+The code I use on the Pico is available in a separate repository [here](https://github.com/burbschat/ledmat8x16pico/).
