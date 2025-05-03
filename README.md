@@ -1,10 +1,19 @@
 # *LTP-12188M-08* Based Two Color 8x8 LED Matrix Display Module
+
 ## Motivation
 Found a place that sold their dead stock of *LTP-12188M-08* modules for
 extremely cheap and bought a whole bunch.
 To drive those I would like to have a minimal and cheap solution which is also
 modular, meaning I can build an (for any practical purposes) arbitrarily sized
 display by just assembling identical modules (and perhaps a few cables etc.).
+
+## Pictures
+### Renders
+Had some fun with [this incredible tool](https://github.com/30350n/pcb2blender).
+![Oblique Render](./figures/render/ledmat_render_oblique_nomodule.png) 
+| Front                                                              | Back                                                              |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------- |
+| ![Front Render](./figures/render/ledmat_render_front_nomodule.png) | ![Front Render](./figures/render/ledmat_render_back_nomodule.png) |
 
 ## Parts
 * *LTP-12188M-08* (8x8 two-color (red/green) LED dot matrix)
