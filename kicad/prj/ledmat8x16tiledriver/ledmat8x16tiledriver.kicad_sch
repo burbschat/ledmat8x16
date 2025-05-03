@@ -12907,7 +12907,7 @@
 					)
 				)
 			)
-			(property "Value" ""
+			(property "Value" "TLC59283"
 				(at 0 0 0)
 				(effects
 					(font
@@ -17429,10 +17429,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "834d6305-4427-4302-b442-f6e540952cbc")
 		(property "Reference" "U1"
-			(at 171.0533 29.21 0)
+			(at 171.45 28.575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17440,8 +17439,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
-			(at 171.0533 30.48 0)
+		(property "Value" "TLC59283"
+			(at 171.45 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -12089,7 +12089,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "TLC59283"
 			(at 0 0 0)
 			(effects
 				(font
