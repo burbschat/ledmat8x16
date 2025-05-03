@@ -506,4 +506,15 @@
 		(uuid "024c5ee8-52bc-4785-8fbb-1af00ee6d14f")
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../lib/3dmodels/ledmatrix_module.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )
