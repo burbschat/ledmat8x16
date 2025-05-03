@@ -6063,15 +6063,15 @@
 			(uuid "135d4efa-912c-49d2-be07-15e5627f4edb")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/../../lib/3dmodels/ledmatrix_module.step"
+		(model "${KIPRJMOD}/../../lib/3dmodels/ledmatrix_module_socketed.step"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 0 1.5)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -0 -0 -0)
 			)
 		)
 	)
