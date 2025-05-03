@@ -10,10 +10,16 @@ display by just assembling identical modules (and perhaps a few cables etc.).
 ## Pictures
 ### Renders
 Had some fun with [this incredible tool](https://github.com/30350n/pcb2blender).
-![Oblique Render](./figures/render/ledmat_render_oblique_nomodule.png) 
-| Front                                                              | Back                                                              |
-| ------------------------------------------------------------------ | ----------------------------------------------------------------- |
-| ![Front Render](./figures/render/ledmat_render_front_nomodule.png) | ![Front Render](./figures/render/ledmat_render_back_nomodule.png) |
+| Front                                                              | Back                                                              | Oblique
+| ------------------------------------------------------------------ | ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ![Front Render](./figures/render/ledmat_render_front_nomodule.png) | ![Front Render](./figures/render/ledmat_render_back_nomodule.png) | ![Oblique Render](./figures/render/ledmat_render_oblique_nomodule.png) |
+
+### Prototype
+Testing three prototype modules driven by a Raspberry Pi Pico (which is
+debugged from a second Pico via SWD).
+The colors do look much more vibrant in person. Also, the apparent differences
+in brightness are an artifact of the way this picture was captured.
+![3 Module Test Setup with Pico](./figures/photos/3module_test_pico.jpg) 
 
 ## Parts
 * *LTP-12188M-08* (8x8 two-color (red/green) LED dot matrix)
