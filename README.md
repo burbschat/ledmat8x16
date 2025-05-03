@@ -1,4 +1,4 @@
-# *LTP-12188M-08* Based Two Color 8x8 LED Matrix Display Module
+# *LTP-12188M-08* Based Two Color 8x16 LEDs in 8x8 Slots LED Matrix Display Module
 
 ## Motivation
 Found a place that sold their dead stock of *LTP-12188M-08* modules for
