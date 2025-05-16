@@ -31,6 +31,12 @@ preflight:
     dir: preflight/erc
     dont_stop: true
     format: HTML,RPT,JSON,CSV
+  set_text_variables:
+    # The revision will be the short git hash
+    # Replaces ${git_hash} on the pcb/schematics
+    - name: 'git_hash'
+      command: 'git log -1 --format="%h" $KIBOT_PCB_NAME'
+      before: 'Git:'
 
 outputs:
 - name: bom
