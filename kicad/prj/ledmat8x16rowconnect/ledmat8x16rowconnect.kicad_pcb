@@ -2851,15 +2851,15 @@
 		(uuid "14d63c4e-455d-4996-891d-89f5bcaba0d6")
 	)
 	(gr_arc
-		(start 143.31062 129.26062)
-		(mid 143.74996 128.19996)
-		(end 144.81062 127.76062)
+		(start 144.810581 66.96062)
+		(mid 143.749923 66.521306)
+		(end 143.310581 65.46066)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
 		(layer "Edge.Cuts")
-		(uuid "15e07613-01f9-416c-9c25-325b10928b47")
+		(uuid "225084f4-76f0-4da9-ab7a-d0b89519e95e")
 	)
 	(gr_line
 		(start 143.31062 129.2607)
@@ -2914,6 +2914,28 @@
 		(uuid "8528c0c1-d74c-4f53-b4a2-91c98b439006")
 	)
 	(gr_arc
+		(start 143.31062 129.2607)
+		(mid 143.749934 128.200042)
+		(end 144.81058 127.7607)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "8676bd17-655a-48a0-826d-28c2619d8232")
+	)
+	(gr_arc
+		(start 130.36066 65.46066)
+		(mid 129.921346 66.521318)
+		(end 128.8607 66.96066)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "87fbcf3f-fc95-4372-b5c2-f4b55de4f6f5")
+	)
+	(gr_arc
 		(start 144.81059 98.860659)
 		(mid 143.74993 98.421319)
 		(end 143.31059 97.360659)
@@ -2924,42 +2946,9 @@
 		(layer "Edge.Cuts")
 		(uuid "9391dc22-c3dc-4154-bd9a-4d006e5c426d")
 	)
-	(gr_arc
-		(start 130.36066 65.46066)
-		(mid 129.92132 66.52132)
-		(end 128.86066 66.96066)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "98992d8d-03db-4fe4-aa0e-8cb2eefc1cc4")
-	)
-	(gr_arc
-		(start 144.81062 66.96062)
-		(mid 143.74996 66.52128)
-		(end 143.31062 65.46062)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "a5f0379f-0162-4e17-958c-06a0f3ea2441")
-	)
-	(gr_arc
-		(start 128.86066 127.76066)
-		(mid 129.92132 128.2)
-		(end 130.36066 129.26066)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "aed69037-a2e8-4134-83c4-ad04f25dfad9")
-	)
 	(gr_line
 		(start 128.86066 95.86066)
-		(end 128.86066 66.96066)
+		(end 128.8607 66.96066)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -2988,8 +2977,54 @@
 		(layer "Edge.Cuts")
 		(uuid "ebb8f1c2-0c58-48f1-b99d-52352728f338")
 	)
+	(gr_arc
+		(start 128.86066 127.76066)
+		(mid 129.921318 128.199974)
+		(end 130.36066 129.26062)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "f8566caa-0d22-4b0a-a257-1c570beb3d38")
+	)
+	(gr_text "${git_hash}"
+		(at 143.8607 112.2607 90)
+		(layer "F.SilkS")
+		(uuid "2674167c-d86b-4c99-8851-cdcbe0efc882")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "github.com/burbschat/ledmat8x16"
+		(at 143.9607 81.2607 90)
+		(layer "F.SilkS")
+		(uuid "6a0d9732-c651-488c-a751-d550e528e996")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "Connectors indicated\nfor use on left side\nof panel. Swap for \nright side use."
+		(at 136.8607 97.4607 0)
+		(layer "F.SilkS")
+		(uuid "83983f37-8f45-4319-9e33-8f664035083d")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+		)
+	)
 	(gr_text "ROW8"
-		(at 134.7607 122.1607 0)
+		(at 134.7607 104.3807 0)
 		(layer "B.SilkS")
 		(uuid "0167ae89-23aa-4dce-8a27-16f2c36ad04c")
 		(effects
@@ -3001,7 +3036,7 @@
 		)
 	)
 	(gr_text "LAT"
-		(at 139.3607 112.0007 0)
+		(at 139.3607 114.5407 0)
 		(layer "B.SilkS")
 		(uuid "01c5829d-5437-4dae-8031-2ff1b3617d16")
 		(effects
@@ -3013,7 +3048,7 @@
 		)
 	)
 	(gr_text "GND"
-		(at 139.3607 109.4607 0)
+		(at 139.3607 117.0807 0)
 		(layer "B.SilkS")
 		(uuid "04179a48-ae29-453c-b50a-85924cab7e9e")
 		(effects
@@ -3025,7 +3060,7 @@
 		)
 	)
 	(gr_text "ROW4"
-		(at 134.7607 112.0007 0)
+		(at 134.7607 114.5407 0)
 		(layer "B.SilkS")
 		(uuid "06e57841-b0df-43f4-89b1-aebd4ea510c8")
 		(effects
@@ -3061,7 +3096,7 @@
 		)
 	)
 	(gr_text "SIN"
-		(at 139.3607 119.6207 0)
+		(at 139.3607 106.9207 0)
 		(layer "B.SilkS")
 		(uuid "148092c7-4fb3-4706-8802-f469dd7cb3fe")
 		(effects
@@ -3085,7 +3120,7 @@
 		)
 	)
 	(gr_text "+5V"
-		(at 139.3607 104.3807 0)
+		(at 139.3607 122.1607 0)
 		(layer "B.SilkS")
 		(uuid "21d2e6ca-b03f-4d04-87d4-5395fb7b1ff0")
 		(effects
@@ -3108,20 +3143,8 @@
 			(justify left mirror)
 		)
 	)
-	(gr_text "${git_hash}"
-		(at 143.8607 112.2607 90)
-		(layer "B.SilkS")
-		(uuid "2674167c-d86b-4c99-8851-cdcbe0efc882")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify bottom mirror)
-		)
-	)
 	(gr_text "ROW5"
-		(at 134.7607 114.5407 0)
+		(at 134.7607 112.0007 0)
 		(layer "B.SilkS")
 		(uuid "34317025-8dba-43b2-8355-2f9a5eef915c")
 		(effects
@@ -3133,7 +3156,7 @@
 		)
 	)
 	(gr_text "BLNK"
-		(at 139.3607 122.1607 0)
+		(at 139.3607 104.3807 0)
 		(layer "B.SilkS")
 		(uuid "362a77fa-80d6-463d-bb90-9444f3dacf24")
 		(effects
@@ -3169,7 +3192,7 @@
 		)
 	)
 	(gr_text "+5V"
-		(at 139.3607 106.9207 0)
+		(at 139.3607 119.6207 0)
 		(layer "B.SilkS")
 		(uuid "4584515e-01ed-47e4-8dbd-34604f37b99b")
 		(effects
@@ -3216,18 +3239,6 @@
 			(justify right mirror)
 		)
 	)
-	(gr_text "github.com/burbschat/ledmat8x16"
-		(at 143.9607 81.2607 90)
-		(layer "B.SilkS")
-		(uuid "6a0d9732-c651-488c-a751-d550e528e996")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify bottom mirror)
-		)
-	)
 	(gr_text "+5V"
 		(at 139.3607 75.1007 0)
 		(layer "B.SilkS")
@@ -3241,7 +3252,7 @@
 		)
 	)
 	(gr_text "ROW3"
-		(at 134.7607 109.4607 0)
+		(at 134.7607 117.0807 0)
 		(layer "B.SilkS")
 		(uuid "7356d687-a5e7-4960-ac93-99fd9185d23c")
 		(effects
@@ -3253,7 +3264,7 @@
 		)
 	)
 	(gr_text "ROW7"
-		(at 134.7607 119.6207 0)
+		(at 134.7607 106.9207 0)
 		(layer "B.SilkS")
 		(uuid "74e5ba9d-dbc3-48f3-93b2-36c2357c638d")
 		(effects
@@ -3277,7 +3288,7 @@
 		)
 	)
 	(gr_text "ROW6"
-		(at 134.7607 117.0807 0)
+		(at 134.7607 109.4607 0)
 		(layer "B.SilkS")
 		(uuid "7d7d7dc0-f3c6-4fe8-9f81-166f196d892a")
 		(effects
@@ -3289,7 +3300,7 @@
 		)
 	)
 	(gr_text "ROW1"
-		(at 134.7607 104.3807 0)
+		(at 134.7607 122.1607 0)
 		(layer "B.SilkS")
 		(uuid "8245802c-b326-471d-ba24-7687625e22fa")
 		(effects
@@ -3349,7 +3360,7 @@
 		)
 	)
 	(gr_text "GND"
-		(at 139.3607 117.0807 0)
+		(at 139.3607 109.4607 0)
 		(layer "B.SilkS")
 		(uuid "dfd9db37-fd65-40ef-b984-2cbd66afa6bc")
 		(effects
@@ -3361,7 +3372,7 @@
 		)
 	)
 	(gr_text "ROW2"
-		(at 134.7607 106.9207 0)
+		(at 134.7607 119.6207 0)
 		(layer "B.SilkS")
 		(uuid "ea4ea0cb-5d97-4b0d-b057-433c616c9fac")
 		(effects
@@ -3373,7 +3384,7 @@
 		)
 	)
 	(gr_text "SCLK"
-		(at 139.3607 114.5407 0)
+		(at 139.3607 112.0007 0)
 		(layer "B.SilkS")
 		(uuid "ea854a31-169b-4299-a293-13be645f635d")
 		(effects
@@ -3394,6 +3405,155 @@
 				(thickness 0.1)
 			)
 			(justify right mirror)
+		)
+	)
+	(dimension
+		(type radial)
+		(layer "Dwgs.User")
+		(uuid "3adafde5-6970-4399-ac25-d8569ed37dfc")
+		(pts
+			(xy 144.810541 65.46066) (xy 143.749899 66.521306)
+		)
+		(leader_length 1.915332)
+		(format
+			(prefix "R ")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "R 1.5"
+			(at 136.90043 67.875653 0)
+			(layer "Dwgs.User")
+			(uuid "3adafde5-6970-4399-ac25-d8569ed37dfc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "Dwgs.User")
+		(uuid "35c5b58b-eeb0-4cfa-ab05-0b9caf8b741d")
+		(pts
+			(xy 143.31062 129.2606) (xy 143.310581 65.46066)
+		)
+		(height 10.55008)
+		(orientation 1)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 3)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "63.8"
+			(at 152.7107 97.36063 90)
+			(layer "Dwgs.User")
+			(uuid "35c5b58b-eeb0-4cfa-ab05-0b9caf8b741d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "Dwgs.User")
+		(uuid "75bfa415-eb9f-4be7-8745-2a5e55b5da99")
+		(pts
+			(xy 144.8106 97.3606) (xy 143.310581 65.46062)
+		)
+		(height 5.0501)
+		(orientation 1)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "31.9"
+			(at 148.7107 81.41061 90)
+			(layer "Dwgs.User")
+			(uuid "75bfa415-eb9f-4be7-8745-2a5e55b5da99")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "Dwgs.User")
+		(uuid "9bc7ccfc-3d74-48ed-b885-99b96f28fa14")
+		(pts
+			(xy 128.8607 66.960659) (xy 144.8106 66.96062)
+		)
+		(height -6.499959)
+		(orientation 0)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 3)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.05)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "15.95"
+			(at 136.83565 59.3107 0)
+			(layer "Dwgs.User")
+			(uuid "9bc7ccfc-3d74-48ed-b885-99b96f28fa14")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
 		)
 	)
 	(segment
@@ -4510,10 +4670,10 @@
 		)
 		(polygon
 			(pts
-				(xy 144.9 71.7) (xy 144.9 123.1) (xy 144.9 123.1) (xy 138 123.1) (xy 137.5 122.6) (xy 137.5 119.3)
-				(xy 138.2 118.6) (xy 140.7 118.6) (xy 142.4 116.9) (xy 142.4 102.1) (xy 140.4607 100.1607) (xy 140.4607 94.9607)
+				(xy 144.9 71.7) (xy 144.9 123.1) (xy 138 123.1) (xy 137.5 122.6) (xy 137.5 119.3) (xy 138.2 118.6)
+				(xy 140.7 118.6) (xy 142.4 116.9) (xy 142.4 102.1) (xy 140.4607 100.1607) (xy 140.4607 94.9607)
 				(xy 142.4 93.0214) (xy 142.4 77.6) (xy 141.1 76.3) (xy 138 76.3) (xy 137.5 75.8) (xy 137.5 72.2)
-				(xy 138 71.7) (xy 144.9 71.7)
+				(xy 138 71.7)
 			)
 		)
 		(filled_polygon
