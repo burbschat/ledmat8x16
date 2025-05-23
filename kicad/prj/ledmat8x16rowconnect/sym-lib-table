@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ledmat8x16")(type "KiCad")(uri "${KIPRJMOD}/../../lib/ledmat8x16.kicad_sym")(options "")(descr ""))
+)
