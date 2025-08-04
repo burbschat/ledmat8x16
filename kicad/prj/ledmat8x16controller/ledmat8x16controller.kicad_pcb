@@ -8542,6 +8542,30 @@
 		(layer "Edge.Cuts")
 		(uuid "fdd5db09-40ac-42f1-ac4f-d63784377002")
 	)
+	(gr_text "github.com/burbschat/ledmat8x16"
+		(at 161.5 80.699999 0)
+		(layer "B.SilkS")
+		(uuid "24252dea-a53b-415a-bba0-c6e14168bc9a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify bottom mirror)
+		)
+	)
+	(gr_text "${git_hash}"
+		(at 161.5 78.699999 0)
+		(layer "B.SilkS")
+		(uuid "8b2c8337-f2d7-49d7-a1d8-31963bdb1ce6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify bottom mirror)
+		)
+	)
 	(via
 		(at 171.22 73.199999)
 		(size 0.6)
