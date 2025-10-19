@@ -9,7 +9,13 @@ display by just assembling identical modules (and perhaps a few cables etc.).
 
 ## Pictures
 ### Renders
-Had some fun with [this incredible tool](https://github.com/30350n/pcb2blender).
+Had some fun with [this incredible
+tool](https://github.com/30350n/pcb2blender). Shown renders are of the first
+version of the single tile driver board.
+There is a newer revision with extra features for mouting as well as a *blade*
+version where 8 modules are combined into one long board, as that is a much
+more reasonable solution for large displays.
+
 | Front                                                              | Back                                                              | Oblique
 | ------------------------------------------------------------------ | ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | ![Front Render](./figures/render/ledmat_render_front_nomodule.png) | ![Front Render](./figures/render/ledmat_render_back_nomodule.png) | ![Oblique Render](./figures/render/ledmat_render_oblique_nomodule.png) |
@@ -19,7 +25,19 @@ Testing three prototype modules driven by a Raspberry Pi Pico (which is
 debugged from a second Pico via SWD).
 The colors do look much more vibrant in person. Also, the apparent differences
 in brightness are an artifact of the way this picture was captured.
+
 ![3 Module Test Setup with Pico](./figures/photos/3module_test_pico.jpg) 
+
+A second test now using the controller and row connect boards for a double row
+display. Again, the colors look much better in person than on this picture.
+This can now display much larger frames as well as animations (cycling through
+a given number of frames in a buffer on the pico). For faster data transfer a
+serial interface over USB is used (previously UART through the debug probe was
+used, which is much slower).
+A debug probe is still attached for, well, debugging. But the device now can be
+used without it.
+
+![double row test](./figures/photos/double_row_test.jpg) 
 
 ## Parts
 * *LTP-12188M-08* (8x8 two-color (red/green) LED dot matrix)
