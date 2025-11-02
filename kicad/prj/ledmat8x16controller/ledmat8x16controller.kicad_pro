@@ -54,27 +54,75 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         [
-          "copper_edge_clearance|157581671|85928125|f4673040-063a-49b0-aa60-a7c3e2ddf927|3d1e6c50-206b-4901-bb97-596577aa74c1",
+          "courtyards_overlap|146605000|62059122|0054e24b-a9de-46a8-963d-1acf5149747a|14902f03-212f-44fc-b5e7-b82b9c1686f9",
           ""
         ],
         [
-          "courtyards_overlap|135295000|62874999|0054e24b-a9de-46a8-963d-1acf5149747a|c0c39d71-a36f-486e-abe6-363c350b44ec",
+          "courtyards_overlap|177935000|80204999|0054e24b-a9de-46a8-963d-1acf5149747a|c0c39d71-a36f-486e-abe6-363c350b44ec",
           ""
         ],
         [
-          "lib_footprint_mismatch|140832500|74409999|0054e24b-a9de-46a8-963d-1acf5149747a|00000000-0000-0000-0000-000000000000",
+          "items_not_allowed|156259781|64463302|788225a3-100a-45c8-ba25-83b5edfa06b0|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "starved_thermal|170420000|83299999|264705ca-0dcf-440f-8d4c-45cdaf5bac31|c1cf357f-81af-46c2-b07a-9ad147b15236|F.Cu",
+          "items_not_allowed|157927724|63388386|8486bf47-c27e-4239-afa0-8b3322a6675f|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "starved_thermal|170420000|84099999|264705ca-0dcf-440f-8d4c-45cdaf5bac31|3a06dd32-a3a6-4b36-af0f-2f4e117cde2d|F.Cu",
+          "net_conflict|151390000|69584122|0058ad3d-f0d6-4e7f-82c4-240c7e70b4a2|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "starved_thermal|179820000|75460000|264705ca-0dcf-440f-8d4c-45cdaf5bac31|c0979bb6-26ae-4051-97ec-3713ba07629e|F.Cu",
+          "net_conflict|151390000|69584122|bdd1af48-56fe-47c3-b5ee-3853cbdf4550|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "net_conflict|151390000|69584122|d09831e6-938e-434e-9193-577bba5c9272|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "net_conflict|151390000|69584122|f36e8881-372f-4cab-9a68-4742cca6c638|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "shorting_items|139960000|78474122|0058ad3d-f0d6-4e7f-82c4-240c7e70b4a2|0058ad3d-f0d6-4e7f-82c4-240c7e70b4a2",
+          ""
+        ],
+        [
+          "shorting_items|142500000|78474122|bdd1af48-56fe-47c3-b5ee-3853cbdf4550|bdd1af48-56fe-47c3-b5ee-3853cbdf4550",
+          ""
+        ],
+        [
+          "shorting_items|172980000|78474122|d09831e6-938e-434e-9193-577bba5c9272|d09831e6-938e-434e-9193-577bba5c9272",
+          ""
+        ],
+        [
+          "shorting_items|175520000|78474122|f36e8881-372f-4cab-9a68-4742cca6c638|f36e8881-372f-4cab-9a68-4742cca6c638",
+          ""
+        ],
+        [
+          "silk_over_copper|170360232|80879026|85b82442-107d-4b90-b154-59a56bdb2f7b|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_over_copper|176145494|80579999|14c8139c-e12f-4d4c-b45e-cf01904f0bd3|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "starved_thermal|136773866|57540791|264705ca-0dcf-440f-8d4c-45cdaf5bac31|a22bbfd9-395c-44c8-a933-f2ede5ea533f|B.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|140831617|57540792|264705ca-0dcf-440f-8d4c-45cdaf5bac31|96de4235-6845-4e53-8726-75b9b611df71|B.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|157740000|79274122|264705ca-0dcf-440f-8d4c-45cdaf5bac31|3d1e6c50-206b-4901-bb97-596577aa74c1|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|170440000|79274122|264705ca-0dcf-440f-8d4c-45cdaf5bac31|3a06dd32-a3a6-4b36-af0f-2f4e117cde2d|F.Cu",
           ""
         ]
       ],
@@ -251,12 +299,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      [
-        "power_pin_not_driven|1663700|1111250|68ed6e23-41c3-4d15-ba68-d965ec51cee3|00000000-0000-0000-0000-000000000000|/b70051c5-e1c4-4c73-82f6-72e0209938d6|/b70051c5-e1c4-4c73-82f6-72e0209938d6|",
-        ""
-      ]
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
@@ -470,6 +513,7 @@
       "single_global_label": "ignore",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -502,13 +546,54 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "name": "pico_power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.8
+      },
+      {
+        "name": "power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.1,
+        "via_diameter": 1.0,
+        "via_drill": 0.5
       }
     ],
     "meta": {
       "version": 4
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "+3V3": [
+        "pico_power"
+      ],
+      "+5V_BUS": [
+        "pico_power"
+      ],
+      "+5V_EXT": [
+        "power"
+      ],
+      "/POWER_BUS": [
+        "power"
+      ],
+      "/VBUS": [
+        "pico_power"
+      ],
+      "/VSYS": [
+        "pico_power"
+      ],
+      "Net-(A1-VSYS)": [
+        "pico_power"
+      ],
+      "Net-(JP3-A)": [
+        "power"
+      ]
+    },
     "netclass_patterns": []
   },
   "pcbnew": {
