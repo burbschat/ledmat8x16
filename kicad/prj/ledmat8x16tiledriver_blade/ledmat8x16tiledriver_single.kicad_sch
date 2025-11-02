@@ -17775,7 +17775,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "1b5c9759-549f-4baf-b8c9-39004d727e1b")
 		(property "Reference" "J2"
@@ -17895,7 +17895,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "1d799bf6-4f3d-481f-bb43-189dc200d554")
 		(property "Reference" "J1"
